@@ -16,5 +16,5 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: 173.212.230.92
-          username: omni
+          username: york
           password: PassContFTP2022
