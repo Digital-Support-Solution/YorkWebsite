@@ -1,140 +1,583 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.layout')
 
-        <title>Laravel</title>
+@section('content')
+    <div class="header-search-overlay-bg"></div>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P46BH3N"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
+    <style>
+        .cycle-custom-caption .rich-text-editor img {
+            margin: 0px;
+            display: inline-block;
+        }
+        .cycle-custom-caption p:last-of-type {
+            margin-bottom: 0px;
+        }
+        @media only screen and (max-width: 767px) {
+            .cycle-custom-caption  .rich-text-editor:not(.footer-rich-text-editor) img  {
+                width: auto !important;
+            }
+            .cycle-custom-caption .table-responsive{
+                border: 0px;
+            }
 
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+        }
+        .cycle-custom-caption .w-semibold {
+            font-size: 24px;
+            color: #5705d8;
+            font-family: aileron-semibold;
+        }
+        .cycle-custom-caption .w-regular {
+
+            color: #000 !important
+        }
+        .cycle-custom-caption .rich-text-editor a{
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        var LocationID = 176;
+
+        window.addEventListener('load', function () {
+            // Get the button that opens the booking
+            var btn = document.getElementById("evBtn");
+
+            // When the user clicks the button, open the booking
+            btn.onclick = function () {
+                window.open('https://web.easyvisit.com.au/?locationID='+LocationID);
+            };
+        })
+        function openModal2() {
+            document.getElementById("evBtn").click();
+        }
+    </script>
+
+    <div class="wrapper sh-page">
+
+
+        <div class="header-wrapper">
+
+            <header class="header">
+
+                <a href="#main" class="skip-content-btn">Skip to main content</a>
+
+
+
+                <div id="header-search-overlay" class="header-search-overlay" aria-hidden="true">
+                    <div class="container header-form-container">
+                        <form action="/gp/wa-york-york-general-practice/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gbp-listing" class="header-search-overlay-form" enctype="multipart/form-data" id="form5538b6c4da974481aa31e912cabf4c50" method="post">            <div class="header-search-overlay-field search-field">
+                                <div class="header-search-overlay-action-wrapper search-action cursor-pointer">
+                                    <button aria-label="submit" type="submit"></button>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.7321 14.7237C14.8188 14.6372 14.8875 14.5344 14.9344 14.4213C14.9813 14.3082 15.0055 14.1869 15.0055 14.0645C15.0055 13.942 14.9813 13.8208 14.9344 13.7077C14.8875 13.5946 14.8188 13.4918 14.7321 13.4053L10.814 9.49016C10.7645 9.44008 10.7334 9.37474 10.7257 9.30475C10.718 9.23475 10.7343 9.16422 10.7717 9.1046C11.4635 8.00291 11.7252 6.68498 11.5068 5.40257C11.2883 4.12016 10.6051 2.96317 9.58764 2.15261C8.57016 1.34206 7.28972 0.934755 5.99093 1.00852C4.69215 1.08228 3.46606 1.63194 2.54689 2.55249C1.62771 3.47303 1.07989 4.69995 1.00807 5.99884C0.936256 7.29773 1.34547 8.57756 2.15755 9.59383C2.96963 10.6101 4.12765 11.2916 5.41038 11.5081C6.69312 11.7246 8.01066 11.4609 9.1113 10.7675C9.17099 10.73 9.24165 10.7138 9.31171 10.7217C9.38177 10.7297 9.44705 10.7611 9.49687 10.811L13.415 14.7262C13.5014 14.813 13.6042 14.8818 13.7173 14.9288C13.8304 14.9758 13.9517 15 14.0742 15C14.1967 15 14.318 14.9758 14.4311 14.9288C14.5442 14.8818 14.6469 14.813 14.7334 14.7262L14.7321 14.7237ZM2.87884 6.29371C2.87884 5.61723 3.07944 4.95595 3.45527 4.39348C3.8311 3.83101 4.36529 3.39262 4.99027 3.13374C5.61525 2.87486 6.30297 2.80713 6.96644 2.9391C7.62992 3.07108 8.23937 3.39683 8.71771 3.87517C9.19605 4.35352 9.5218 4.96296 9.65378 5.62644C9.78575 6.28992 9.71802 6.97763 9.45914 7.60261C9.20027 8.2276 8.76187 8.76178 8.1994 9.13761C7.63693 9.51344 6.97565 9.71404 6.29917 9.71404C5.39225 9.71338 4.52266 9.35281 3.88136 8.71152C3.24007 8.07023 2.8795 7.20064 2.87884 6.29371Z"/>
                                     </svg>
                                 </div>
+                                <input type="text"
+                                       placeholder="Search"
+                                       id="keyword"
+                                       name="keyword"
+                                       title="Search keyword"
+                                       data-enabled="true"
+                                       data-searchResultsPage="/gp/wa-york-york-general-practice/search-results/"
+                                       data-rootid="19821"
+                                       class="search-input"/>
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
+                                <div class="search-clear">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.36399 8.02657C9.34403 8.00666 9.3282 7.98302 9.3174 7.95698C9.30659 7.93095 9.30103 7.90304 9.30103 7.87485C9.30103 7.84667 9.30659 7.81876 9.3174 7.79273C9.3282 7.76669 9.34403 7.74305 9.36399 7.72314L12.6135 4.47368C12.6953 4.39461 12.7606 4.30003 12.8055 4.19545C12.8505 4.09088 12.8741 3.9784 12.8751 3.86459C12.8761 3.75078 12.8544 3.63791 12.8113 3.53257C12.7682 3.42723 12.7046 3.33153 12.6241 3.25105C12.5436 3.17057 12.4479 3.10693 12.3426 3.06383C12.2372 3.02073 12.1243 2.99904 12.0105 3.00003C11.8967 3.00102 11.7843 3.02467 11.6797 3.06959C11.5751 3.11451 11.4805 3.17981 11.4015 3.26168L8.15199 6.51114C8.13208 6.5311 8.10844 6.54693 8.0824 6.55773C8.05637 6.56853 8.02846 6.57409 8.00027 6.57409C7.97209 6.57409 7.94418 6.56853 7.91814 6.55773C7.89211 6.54693 7.86846 6.5311 7.84856 6.51114L4.59909 3.26168C4.43744 3.10554 4.22092 3.01914 3.99618 3.0211C3.77144 3.02305 3.55646 3.1132 3.39754 3.27212C3.23861 3.43104 3.14847 3.64602 3.14652 3.87076C3.14456 4.0955 3.23096 4.31202 3.38709 4.47368L6.63656 7.72314C6.65651 7.74305 6.67235 7.76669 6.68315 7.79273C6.69395 7.81876 6.69951 7.84667 6.69951 7.87485C6.69951 7.90304 6.69395 7.93095 6.68315 7.95698C6.67235 7.98302 6.65651 8.00666 6.63656 8.02657L3.38709 11.276C3.23096 11.4377 3.14456 11.6542 3.14652 11.8789C3.14847 12.1037 3.23861 12.3187 3.39754 12.4776C3.55646 12.6365 3.77144 12.7267 3.99618 12.7286C4.22092 12.7306 4.43744 12.6442 4.59909 12.488L7.84856 9.23857C7.86846 9.21861 7.89211 9.20278 7.91814 9.19198C7.94418 9.18118 7.97209 9.17561 8.00027 9.17561C8.02846 9.17561 8.05637 9.18118 8.0824 9.19198C8.10844 9.20278 8.13208 9.21861 8.15199 9.23857L11.4015 12.488C11.5631 12.6442 11.7796 12.7306 12.0044 12.7286C12.2291 12.7267 12.4441 12.6365 12.603 12.4776C12.7619 12.3187 12.8521 12.1037 12.854 11.8789C12.856 11.6542 12.7696 11.4377 12.6135 11.276L9.36399 8.02657Z"/>
+                                    </svg>
+                                </div>
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
+                            <button class="header-search-overlay-close"
+                                    role="button"
+                                    aria-label="Close search"
+                                    aria-pressed="false"
+                                    aria-controls="header-search-overlay">
+                                Close
+                            </button>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DlSDOn8PS1ClelvJIaTaxcH1UHkH0EQ3eQheDmltdrpsn6LuX363EBtFcMqPPJFAOOkgHng4QGyz-KXlppdu1Hf2bQzdiPNHJparvhXQwQ9IdnAjnnh0RLZD8CLoujQ-zOKeaGpM4-CsNIzHe6imiw" /><input name="ufprt" type="hidden" value="CfDJ8DlSDOn8PS1ClelvJIaTaxfM0ulSR0OImYGcbeA_KDyMWHgYQfZhNJN5V-wXdm8xxqL7sDkeXFragu3OmcGvrJMEXm0UkwWeqZBTMI3G3TF5qiblrH19oEY4klvwY43I7g1a6qfltzJ74r_Ps_Mqkk8NTgL3Wy-EqmVEKRefhBsl" /></form>    </div>
+                    <div class="container header-results-container">
+                        <div class="header-search-overlay-response-placeholder" data-status="loaded">
+                            <div class="row">
+                                <div class="col-12 header-search-overlay-response-left">
+                                    <div class="header-search-overlay-loader">
+                                        <div id="circularG">
+                                            <div id="circularG_1" class="circularG"></div>
+                                            <div id="circularG_2" class="circularG"></div>
+                                            <div id="circularG_3" class="circularG"></div>
+                                            <div id="circularG_4" class="circularG"></div>
+                                            <div id="circularG_5" class="circularG"></div>
+                                            <div id="circularG_6" class="circularG"></div>
+                                            <div id="circularG_7" class="circularG"></div>
+                                            <div id="circularG_8" class="circularG"></div>
+                                        </div>
+                                    </div>
+                                    <div class="header-search-overlay-results-container">
+                                    </div>
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
+                <div class="js-hide-on-search">
+
+
+
+
+                    <div class="top-bar d-none d-md-block">
+                        <div class="container">
+                            <div class="top-bar-row">
+                                <div class="top-bar-text">
+
+
+                                </div>
+
+                                <div class="top-bar-controls contols d-none d-md-flex align-items-center">
+                                    <a href="#" onclick="header.decrease()" role="button" aria-label="Decrease Font Size" tabindex="0"><i class="icon icon_font-reduce"></i><span>Smaller</span></a>
+                                    <a href="#" onclick="header.increase()" role="button" aria-label="Increase Font Size" tabindex="0"><i class="icon icon_font-increase"></i><span>Larger</span></a>
+
+
+                                    <a href="#" onclick="print()" role="button" aria-label="Print" tabindex="0"><i class="icon icon_print"></i><span>Print</span></a>
+
+
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+
+                    <div class="main-nav">
+
+                        <div class="container">
+
+                            <div class="logo pull-left">
+                                <a href="/gp/wa-york-york-general-practice/">
+                                    <img alt="York General Practice | IPN" height="60" src="/media/9449/ipn_york-general-practice.svg" class="header-logo d-sm-none" id="small-screen-logo"/>
+                                    <img alt="York General Practice | IPN" height="60" src="/media/9449/ipn_york-general-practice.svg" class="header-logo d-none d-sm-inline-block d-md-none" id="mobi-logo"/>
+                                    <img alt="York General Practice | IPN" height="100" src="/media/9449/ipn_york-general-practice.svg" class="header-logo d-none d-md-inline-block" id="dtop-logo"/>
+                                </a>
+                            </div>
+
+                            <div class="buttons pull-right">
+                                <a role="button" aria-label="Search" aria-pressed="false" aria-controls="header-search-overlay" class="header-icon header-icon-search js-header-search-trigger">
+                                    <i class="icon icon_search d-none d-md-inline-block"></i>
+                                    <svg class="d-inline-block d-md-none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.7321 14.7237C14.8188 14.6372 14.8875 14.5344 14.9344 14.4213C14.9813 14.3082 15.0055 14.1869 15.0055 14.0645C15.0055 13.942 14.9813 13.8208 14.9344 13.7077C14.8875 13.5946 14.8188 13.4918 14.7321 13.4053L10.814 9.49016C10.7645 9.44008 10.7334 9.37474 10.7257 9.30475C10.718 9.23475 10.7343 9.16422 10.7717 9.1046C11.4635 8.00291 11.7252 6.68498 11.5068 5.40257C11.2883 4.12016 10.6051 2.96317 9.58764 2.15261C8.57016 1.34206 7.28972 0.934755 5.99093 1.00852C4.69215 1.08228 3.46606 1.63194 2.54689 2.55249C1.62771 3.47303 1.07989 4.69995 1.00807 5.99884C0.936256 7.29773 1.34547 8.57756 2.15755 9.59383C2.96963 10.6101 4.12765 11.2916 5.41038 11.5081C6.69312 11.7246 8.01066 11.4609 9.1113 10.7675C9.17099 10.73 9.24165 10.7138 9.31171 10.7217C9.38177 10.7297 9.44705 10.7611 9.49687 10.811L13.415 14.7262C13.5014 14.813 13.6042 14.8818 13.7173 14.9288C13.8304 14.9758 13.9517 15 14.0742 15C14.1967 15 14.318 14.9758 14.4311 14.9288C14.5442 14.8818 14.6469 14.813 14.7334 14.7262L14.7321 14.7237ZM2.87884 6.29371C2.87884 5.61723 3.07944 4.95595 3.45527 4.39348C3.8311 3.83101 4.36529 3.39262 4.99027 3.13374C5.61525 2.87486 6.30297 2.80713 6.96644 2.9391C7.62992 3.07108 8.23937 3.39683 8.71771 3.87517C9.19605 4.35352 9.5218 4.96296 9.65378 5.62644C9.78575 6.28992 9.71802 6.97763 9.45914 7.60261C9.20027 8.2276 8.76187 8.76178 8.1994 9.13761C7.63693 9.51344 6.97565 9.71404 6.29917 9.71404C5.39225 9.71338 4.52266 9.35281 3.88136 8.71152C3.24007 8.07023 2.8795 7.20064 2.87884 6.29371Z"/>
+                                    </svg>
+                                </a>
+                                <a href="javascript:;" class="mobile-menu-open" title="menu"><i aria-label="menu" class="icon icon_menu"></i><br />MENU</a>
+                            </div>
+
+                            <div class="clear"></div>
+
+
+
+                            <nav aria-label="Main Navigation" class="d-none d-md-block">
+                                <div class="pull-right desktop-menu-more" style=""><a href="#" aria-label=""><i class="icon icon_menu-dots"></i></a></div>
+
+                                <ul>
+                                    <li class="dropdown megamenu">
+                                        <a href="/gp/wa-york-york-general-practice/fees-appointments/" target="_self" class="active">Fees &amp; Appointments</a>
+                                    </li>
+                                    <li class="dropdown megamenu">
+                                        <a href="/gp/wa-york-york-general-practice/our-doctors/" target="_self" class="active">Our Doctors</a>
+                                    </li>
+                                    <li class="dropdown megamenu">
+                                        <a href="/gp/wa-york-york-general-practice/our-services/" target="_self" class="active">Our Services</a>
+                                    </li>
+                                    <li class="dropdown megamenu">
+                                        <a href="/gp/wa-york-york-general-practice/our-practice/" target="_self" class="active">Our Practice</a>
+                                    </li>
+                                    <li class="dropdown megamenu">
+                                        <a href="/gp/wa-york-york-general-practice/contact-us/" target="_self" class="active">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="clear"></div>
+
+                            <div class="mobile-menu">
+                                <div class="overlay">
+
+                                </div>
+                                <div class="menu">
+                                    <div class="mobile-menu-header">
+                                        <ul class="mobile-menu-quickitems">
+                                            <li class="w-decrease-item">
+                                                <a class="w-decrease"
+                                                   role="button"
+                                                   aria-label="Decrease Font Size"
+                                                   tabindex="0"
+                                                   onclick="header.decrease();"
+                                                   href="javascript:;">
+                                                    <span class="sh-icon sh-icon-smallertext"></span>
+                                                </a>
+                                            </li>
+                                            <li class="w-increase-item">
+                                                <a class="w-increase"
+                                                   role="button"
+                                                   aria-label="Increase Font Size"
+                                                   tabindex="0"
+                                                   onclick="header.increase();"
+                                                   href="javascript:;">
+                                                    <span class="sh-icon sh-icon-largertext"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <a class="close-menu" href="javascript:;"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <ul data-level="0">
+                                        <li class="">
+                                            <a href="/gp/wa-york-york-general-practice/fees-appointments/" title="Fees &amp; Appointments" target="_self">
+                                                <div>Fees &amp; Appointments</div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/gp/wa-york-york-general-practice/our-doctors/" title="Our Doctors" target="_self">
+                                                <div>Our Doctors</div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/gp/wa-york-york-general-practice/our-services/" title="Our Services" target="_self">
+                                                <div>Our Services</div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/gp/wa-york-york-general-practice/our-practice/" title="Our Practice" target="_self">
+                                                <div>Our Practice</div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="/gp/wa-york-york-general-practice/contact-us/" title="Contact Us" target="_self">
+                                                <div>Contact Us</div>
+                                            </a>
+                                        </li>
+                                        <li class="mobileLogoutButton">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="header-information-bar">
+                        <div class="container">
+                            <div class="text-left">
+                                <p><a id="evBtn" style="background: none; border: none; font-family: aileron; font-weight: 600;" href="#"><img style="vertical-align: middle;" class="cke_widget_element" src="/media/5570/icon_book-online.png" alt="Book Online" width="17" height="17" data-id="13732" data-cke-saved-src="https://pre-ipn.apps.sonichealthcare.com/media/5570/icon_book-online.png" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fpre-ipn.apps.sonichealthcare.com%2Fmedia%2F5570%2Ficon_book-online.png%22%2C%22alt%22%3A%22Book%20Online%22%2C%22width%22%3A%2220%22%2C%22height%22%3A%2220%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image">   Book Online</a>    <a href="tel:(08)96410000"><span class="cke_widget_wrapper cke_widget_inline cke_image_nocaption cke_widget_selected" data-cke-widget-wrapper="1" data-cke-filter="off" data-cke-display-name="image" data-cke-widget-id="2" aria-label="Phone image widget"><img style="vertical-align: middle;" class="cke_widget_element" src="/media/5579/ph.png" alt="Phone" width="17" height="17" data-id="13741" data-cke-saved-src="https://pre-ipn.apps.sonichealthcare.com/media/5579/ph.png" data-cke-widget-data="%7B%22hasCaption%22%3Afalse%2C%22src%22%3A%22https%3A%2F%2Fpre-ipn.apps.sonichealthcare.com%2Fmedia%2F5579%2Fph.png%22%2C%22alt%22%3A%22Phone%22%2C%22width%22%3A%2220%22%2C%22height%22%3A%2220%22%2C%22lock%22%3Atrue%2C%22align%22%3A%22none%22%2C%22classes%22%3Anull%7D" data-cke-widget-upcasted="1" data-cke-widget-keep-attr="0" data-widget="image"><span class="cke_image_resizer">  (08) 9641 0000</span></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+            <a name="main" class="main-content-link"></a>
+        </div>
+        <main>
+
+
+            <section class="w-gallery cycle-wrapper has-gradient ">
+
+                <div
+                    class="w-gallery cycle-slideshow"
+                    data-cycle-swipe="true"
+                    data-cycle-timeout="5000"
+                    data-cycle-fx="fade"
+                    data-cycle-prev=".cycle-prev"
+                    data-cycle-next=".cycle-next"
+                    data-cycle-pager=".cycle-pager"
+                    data-cycle-pager-template="<a class='cycle-pager-item' href='#cycle-slide-1' aria-controls='cycle-slide-1' aria-label='Go to slide 1'></a>"
+                    data-cycle-slides="> .cycle-slide">
+
+                    <div tabindex="0"
+                         class="cycle-slide w-no-heading w-no-sub-heading w-no-link  w-invert-controls"
+                         data-cycle-timeout="5000"
+                         data-cycle-fx="fade">
+
+                        <!-- Image -->
+                        <div class="cycle-slide-img" >
+                            <picture>
+                                <source srcset="/media/9446/dsc07950-copy.jpg?format=webp&amp;quality=80&amp;rnd=132929452254330000" type="image/webp" media="(min-width: 1200px)" />
+                                <source srcset="/media/9446/dsc07950-copy.jpg?width=1920&amp;height=985&amp;rnd=132929452254330000" media="(min-width: 1200px)" />
+                                <source srcset="/media/9446/dsc07950-copy.jpg?format=webp&amp;quality=80&amp;rnd=132929452254330000" type="image/webp" media="(min-width: 992px)"/>
+                                <source srcset="/media/9446/dsc07950-copy.jpg?width=1200&amp;height=975&amp;rnd=132929452254330000" media="(min-width: 992px)"/>
+                                <source srcset="/media/9446/dsc07950-copy.jpg?format=webp&amp;quality=80&amp;rnd=132929452254330000"  type="image/webp" media="(min-width: 574px)"/>
+                                <source srcset="/media/9446/dsc07950-copy.jpg?width=1024&amp;height=975&amp;rnd=132929452254330000" media="(min-width: 574px)"/>
+                                <source srcset="/media/9446/dsc07950-copy.jpg?format=webp&amp;quality=80&amp;rnd=132929452254330000" type="image/webp" />
+                                <img src="/media/9446/dsc07950-copy.jpg?width=768&amp;height=520&amp;rnd=132929452254330000" alt="Book Now" />
+                            </picture>
+
+                            <div class="cycle-controls cycle-controls-mobile  w-single-slide d-lg-none">
+                                <div class="cycle-controls-container">
+                                    <a role="button" aria-label="Play / pause slide" href="javascript:;" class="cycle-play"></a>
+                                    <div class="cycle-pager"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caption -->
+                        <div class="cycle-custom-caption-wrapper">
+                            <div class="container">
+                                <div class="d-md-flex justify-content-md-end">
+                                    <div class="cycle-custom-caption">
+                                        <div class="cycle-custom-caption-scroll">
+                                            <div class="cycle-custom-caption-summary">
+
+
+                                                <div class="rich-text-editor">
+                                                    <p><img src="/media/9435/easyvisit_colour_rgb_high.jpg?width=282&amp;height=67&amp;mode=max" alt="EasyVisit" width="282" height="67"></p>
+                                                    <p><span class="w-semibold" style="font-size: 24px; color: #5705d8;">Take the hassle out of Healthcare</span></p>
+                                                    <div class="table-responsive">
+                                                        <table border="0" class="table" style="width: 100%; font-size: 14px; height: 151px;">
+                                                            <tbody>
+                                                            <tr style="height: 24px;">
+                                                                <td style="border-top: 1px solid #ffffff; padding: 6px 8px 6px 0px; width: 8.31099%; height: 24px;"><img style="min-width: 18px;" src="/media/9441/ev_phone.svg" alt="" width="auto" height="18px"></td>
+                                                                <td colspan="2" style="border-top: 1px solid #ffffff; padding: 8px 8px 8px 0px; width: 90.7954%; height: 24px;"><a href="tel:(08) 96410000"><span class="w-regular">(08) 9641 0000</span></a></td>
+                                                            </tr>
+                                                            <tr style="height: 24px;">
+                                                                <td style="border-top: 1px solid #ffffff; padding: 6px 8px 6px 0px; width: 8.31099%; height: 24px;"><span class="w-regular"><img style="min-width: 18px;" src="/media/9439/ev_address.svg" alt="" width="auto" height="18px"></span></td>
+                                                                <td colspan="2" style="border-top: 1px solid #ffffff; padding: 6px 8px 6px 0px; width: 90.7954%; height: 24px;"><a rel="noopener" href="https://goo.gl/maps/9K5WnocBArxYjUjcA" target="_blank"><span class="w-regular">6 Howick Street, York WA 6302</span></a></td>
+                                                            </tr>
+                                                            <tr style="height: 23px;">
+                                                                <td style="border-top: 1px solid #ffffff; padding: 4px 8px 4px 0px; width: 8.31099%; height: 23px;"><img style="min-width: 18px;" src="/media/9440/ev_opening-hrs.svg" alt="" width="auto" height="18px"></td>
+                                                                <td style="border-top: 1px solid #ffffff; padding: 4px 8px 4px 0px; width: 33.6908%; height: 23px;"><span class="w-regular">Monday to Friday</span></td>
+                                                                <td style="border-top: 1px solid #ffffff; padding: 4px 8px 4px 0px; width: 57.1046%; height: 23px;">8:30am - 5:00pm</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <p class="purple-button"><span class="btn btn-custom-3" style="background-color: #5705db; color: #ffffff; margin: 0;"><a id="evBtn2" rel="noopener"></a>Make a booking</span></p>
+                                                </div>                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="cycle-controls  w-single-slide d-none d-lg-block">
+                            <div class="cycle-controls-container">
+                                <a role="button" aria-label="Play / pause slide" href="javascript:;" class="cycle-play"></a>
+                                <div class="cycle-pager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="main-content">
+                <div class="Content-Wrapper">
+                    <div class="container sonic-container py-2 py-md-4">
+
+
+
+                        <!-- with SideMenu -->
+
+                        <div>
+
+                            <div class="umb-grid">
+                                <div class="row  Content1Column">
+                                    <div class="col-12">
+
+
+
+                                        <section class="w-match-height rich-text-editor-module">
+                                            <div class="rich-text-editor">
+                                                <p><span style="color: #084eb2;"><strong>[UPDATED 17 January 2024] – The centre will remain closed today, and will resume operations tomorrow, 18 January 2024. We thank you for your kind understanding. </strong></span></p>
+                                            </div>
+                                        </section>
+
+
+                                        <section class="w-match-height rich-text-editor-module">
+                                            <div class="rich-text-editor">
+                                                <h2>York General Practice</h2>
+                                                <p>In 2009, The Old York Primary School, one of the oldest buildings in York, was converted to become York General Practice. Our GPs live locally and understand the health care needs of our small country town.</p>
+                                                <p><strong>If you have any symptoms of COVID-19, are a close contact of a COVID-19 positive case or are currently awaiting test results for COVID-19 please contact us by phone prior to making a booking or visiting our medical centre.</strong></p>
+                                                <p><strong>Mask wearing is recommended in our Medical Centre. If you are experiencing any acute respiratory symptoms please ensure you are wearing a mask. If you are asked to wear a mask during your consultation or when in our waiting room we appreciate your understanding.</strong></p>
+                                            </div>
+                                        </section>                </div>
+                                </div>
+                                <div class="row feature-sections content3Column Content3Column">
+                                    <div class="col-lg-4">
+
+
+                                        <section class="feature-tile w-match-height">
+                                            <div class="feature-tile-media">
+                                                <picture>
+                                                    <source srcset="/media/9438/ev_screens.jpg?format=webp&amp;quality=80&amp;rnd=132485273399130000" type="image/webp"/>
+                                                    <img class="feature-tile-img" src="/media/9438/ev_screens.jpg" alt="Ev Screens"/>
+                                                </picture>
+                                            </div>
+                                            <div class="feature-tile-content">
+                                                <div class="feature-tile-body">
+                                                    <div class="feature-tile-description">
+
+                                                        <div class="rich-text-editor">
+                                                            <p><img alt="Easyvisit Colour RGB High" class="editorImage" data-id="30133" height="59" src="/media/9435/easyvisit_colour_rgb_high.jpg" width="250"></p><p><span style="font-family:aileronsemibold;"><span style="font-size:18px; color: #5705d8"><b>Take the hassle out of Healthcare</b></span></span></p><p>See your GP, easily! EasyVisit helps patients connect with their Doctors across Australia and takes the hassle out of healthcare.</p><p>EasyVisit&nbsp;is the booking platform for:</p><ul>	<li>Practices within IPN Medical Centres</li>	<li>Australian Skin Cancer Clinics</li>	<li>Medical centres within Sonic HealthPlus</li></ul><p><a href="https://play.google.com/store/apps/details?id=com.sonichealthcare.easyvisit"><img alt="Google Play" class="editorImage" data-id="28583" height="30" src="/media/Multisite9329/google-play.svg" width="101"></a>&nbsp;&nbsp;<a href="https://apps.apple.com/au/app/gp4me/id916155535"><img alt="App Store" class="editorImage" data-id="28584" height="30" src="/media/Multisite9330/app-store.svg" width="89"></a></p><p>&nbsp;</p><p class="purple-button"><span class="btn btn-custom-3" style="background-color: #5705db; color: #ffffff; margin: 0;"><a id="evBtn2" onclick="openModal2();" rel="noopener"></a>Make a booking</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+
+                                        <section class="feature-tile w-match-height">
+                                            <div class="feature-tile-media">
+                                                <picture>
+                                                    <source srcset="/media/9436/istock-1177027395.jpg?format=webp&amp;quality=80&amp;rnd=132485272081070000" type="image/webp"/>
+                                                    <img class="feature-tile-img" src="/media/9436/istock-1177027395.jpg" alt="Istock 1177027395"/>
+                                                </picture>
+                                            </div>
+                                            <div class="feature-tile-content">
+                                                <div class="feature-tile-body mb-4">
+                                                    <div class="feature-tile-description">
+
+                                                        <div class="rich-text-editor">
+                                                            <h2>Our Doctors</h2><p>Our independent doctors are experienced in every aspect of family health and can help you at any stage of life. Some GPs also have extra qualifications and areas of special interest.</p><p>&nbsp;</p><ul></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="feature-tile-footer">
+                                                    <div class="sonic-link">
+                                                        <a class="sonic-link-text" href="/gp/wa-york-york-general-practice/our-doctors/" target="_self">
+                                                            Read Doctor bios
+                                                        </a>
+                                                        <i class="sonic-link-icon sonic-link-icon-right sonic sonic_thick-arrow-right"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+
+                                        <section class="feature-tile w-match-height">
+                                            <div class="feature-tile-media">
+                                                <picture>
+                                                    <source srcset="/media/cishxoni/adobestock_602848546.jpeg?format=webp&amp;quality=80&amp;rnd=133473874132270000" type="image/webp"/>
+                                                    <img class="feature-tile-img" src="/media/cishxoni/adobestock_602848546.jpeg" alt="Adobestock 602848546"/>
+                                                </picture>
+                                            </div>
+                                            <div class="feature-tile-content">
+                                                <div class="feature-tile-body">
+                                                    <div class="feature-tile-description">
+
+                                                        <div class="rich-text-editor">
+                                                            <h2><span style="color: #c8102e;">Prioritise your Heart Health in 2024!</span></h2>
+                                                            <p>What are your resolutions for the New Year? An important resolution for 2024 should be to prioritise your heart health! ❤️</p>
+                                                            <p>Start the New Year by eating well, exercising regularly, quitting smoking, and seeing your GP regularly. </p>
+                                                            <p><a href="https://web.easyvisit.com.au/?locationID=176" target="_blank" class="btn-custom dark-btn btn-custom-1" data-anchor="?locationID=176" rel="noopener">Book an appointment today!</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                    </div>
+                                </div>
+                            </div>        <div>
+
+
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>
-        </div>
-    </body>
-</html>
+        </main>
+    </div>
+
+    <div class="footer-wrapper">
+
+
+
+        <footer class="w-footer">
+
+            <div class="w-footer-main">
+                <div class="container sonic-container">
+
+
+                    <div class="w-footer-text">
+                        <div class="footer-row">
+                            <div class="footer-col">
+                                <h2>
+                                    Contact Us                </h2>
+                                <ul>
+                                    <li class="rich-text-editor footer-rich-text-editor" x-ms-format-detection="none"><p>Phone: <a href="tel:(08) 9641 0000">(08) 9641 0000</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h2>
+                                    Policies                </h2>
+                                <ul>
+                                    <li class="rich-text-editor footer-rich-text-editor">
+                                        <a href="https://www.ipn.com.au/media/10357/privacy-policy_may-2022.pdf" target="_self">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h2>
+                                    York General Practice is part of IPN Medical Centres                </h2>
+                                <ul>
+                                    <li class="rich-text-editor footer-rich-text-editor">
+                                        <a href="https://www.ipn.com.au" target="_blank">Visit the IPN website</a>
+                                    </li>
+                                    <li>
+                                        <span><a href='https://www.facebook.com/York-General-Practice-1639398072950166/' target='_blank'><img src="/media/5558/fb.png" style="width:25px;height:25px;"></a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col">
+                                <h2>
+                                    Download the App!                </h2>
+                                <ul>
+                                    <li class="rich-text-editor footer-rich-text-editor" x-ms-format-detection="none"><p><a href="http://www.easyvisit.com.au"><img alt="Easyvisit Rev" class="editorImage" data-id="30145" height="40" src="/media/9444/easyvisit_rev.svg" width="169" /></a></p>
+
+                                        <p><a href="https://apps.apple.com/au/app/gp4me/id916155535"><img alt="App Store" class="editorImage" data-id="28584" height="30" src="/media/Multisite9330/app-store.svg" style="margin-right: 5px;" width="89" /></a><a href="https://play.google.com/store/apps/details?id=com.sonichealthcare.easyvisit"><img alt="Google Play" class="editorImage" data-id="28583" height="30" src="/media/Multisite9329/google-play.svg" width="101" /></a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-footer-bottom w-has-additional">
+                <div class="container sonic-container">
+                    <div class="row">
+                        <div class="col-12">
+                        <span class="w-copyright">
+                            &copy; IPN Medical Centres Pty Ltd 2024
+                        </span>
+                            <span class="w-additional">6 Howick Street, York WA 6302</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <div class="floating-controls">
+        <a id="back-to-top" href="#" class="back-to-top-btn" role="button"
+           aria-label="Click to return on the top page">
+            <i class="icon sh-icon-thick-arrow-up"></i>
+        </a>
+    </div>
+@endsection
