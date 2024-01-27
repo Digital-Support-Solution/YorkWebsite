@@ -1,14 +1,14 @@
 <!-- Start Header Section -->
-<header class="cs_site_header cs_style1 cs_sticky_header cs_heading_color">
+<header class="cs_site_header cs_style1 cs_color_1 cs_sticky_header cs_white_color">
     <div class="cs_main_header">
         <div class="container">
             <div class="cs_main_header_in">
                 <div class="cs_main_header_left">
                     <a class="cs_site_branding" href="{{ route('welcome') }}">
-                        <img src="{{ asset('img/logo.png') }}"   width="240px" alt="Logo">
+                        <img src="{{ asset('img/logo-white.png') }}"   width="200px" alt="Logo">
                     </a>
                     <nav class="cs_nav">
-                        <ul class="cs_nav_list">
+                        <ul class="cs_nav_list ">
                             <li><a href="{{ route('appointments') }}">Fees & Appointments</a></li>
                             <li><a href="{{ route('doctors') }}">Doctors</a></li>
                             <li><a href="{{ route('services') }}">Our Services</a></li>
