@@ -5,210 +5,56 @@
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <title>Home | York General Practice | IPN</title>
+    <title>Home | York General Practice</title>
 
-    <link rel="shortcut icon" href="/images/favicon-ipn.ico" />
-    <link rel="apple-touch-icon" href="/images/favicon-ipn.ico" />
-
-
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/glyphicons-halflings-regular.woff2" />
-
-    <script integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/vendor/jquery.reject.css" />
-    <link rel="stylesheet" type="text/css" href="/css/frontend.bundle.min.css" />
-
-
-
-    <style>
-        :root {
-            --primary: #195c9e;
-            --secondary: #00909e;
-            --alternate-secondary: #195c9e;
-            --dark-secondary: #4685bf;
-            --menu-text-hover-colour: #00909e;
-            --menu-text-colour: #195c9e;
-            --dark-background-text-colour: #ffffff;
-            --dark-background-text-hover-colour: #ffffff;
-            --button-colour: #195c9e;
-            --button-hover-colour: #195c9e;
-            --button-text-colour: #ffffff;
-            --h1: #195c9e;
-            --h2: #195c9e;
-            --h3: #00909e;
-            --h4: #195c9e;
-            --h5: #4685bf;
-            --h6: #4685bf;
-            --p: #474747;
-            --link-colour: #195c9e;
-            --link-hover-colour: #00909e;
-            --link-icon-colour: #195c9e;
-            --light-primary: #4685bf;
-            --light-accent-1: #e5e7f2;
-            --light-accent-2: #e5e9f2;
-            --light-accent-3: #f3f5f9;
-            --error: #e31937;
-            --selected: #195c9e;
-            --exception-button-colour-dark: #195c9e;
-            --exception-button-hover-colour-dark: #00909e;
-            --exception-button--hover-text-dark: #ffffff;
-            --exception-dark-accent-1: #ffffff;
-            --exception-dark-accent-hover-1: #4685bf;
-            --exception-dark-accent-text-1: #ffffff;
-            --exception-cookie-notification-text-colour: #ffffff;
-            --exception-cookie-notification-background: #004b8e;
-            --exception-notification-background-colour: #f4f4f4;
-            --exception-notification-text-colour: #686868;
-            --exception-active-text: #4685bf;
-            --exception-sub-menu-dropdown-background: #f3f5f9;
-            --exception-button-custom: #e5e7f2;
-            --exception-button-custom-hover: #00909e;
-            --exception-border-dark: #000000;
-            --exception-border-light: #e5e7f2;
-            --exception-drop-down-link-text-colour: #195c9e;
-            --exception-summary-text: #000000;
-            --exception-table-alternative-row-background: #f3f5f9;
-            --exception-table-alternative-row-hover-background: #e5e7f2;
-            --exception-link-colour-2: #ffffff;
-            --exception-link-hover-colour-2: #ffffff;
-            --exception-light-background-text-colour: #000000;
-            --exception-light-background-text-hover-colour: #000000;
-        }
-    </style>
-
-
-    <style type="text/css" media="screen">
-        .header-logo
-        {
-            height: 60px;
-            max-height: 60px;
-            min-height: 60px;
-        }
-        @media (min-width: 360px)
-        {
-            .header-logo
-            {
-                height: 60px;
-                max-height: 60px;
-                min-height: 60px;
-            }
-        }
-        @media (min-width: 1024px)
-        {
-            .header-logo
-            {
-                height: 100px;
-                max-height: 100px;
-                min-height: 100px;
-            }
-        }
-    </style>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-P46BH3N');</script>
-    <!-- End Google Tag Manager -->
-
-
-
-
-
-    <style type="text/css">
-        .purple-button .btn-custom-3 a {color: #ffffff !important;}
-        .purple-button .btn-custom-3:hover {
-            background-color: #390192 !important;
-        }
-        .green-button .btn-custom-3 a {color: #ffffff !important;}
-        .green-button .btn-custom-3:hover {
-            background-color: #00731d !important;
-        }
-        @media screen and (max-width: 767px) {
-            .table-responsive .scroll-container {
-                border: 1px solid #ffffff;
-            }
-        }
-        span.w-regular {
-            color: #474747 !important;
-        }
-
-        .cycle-custom-caption-scroll a, cycle-custom-caption-scroll p {
-            color: #390192 !important;
-        }
-
-    </style>
-    <style>
-        .cycle-custom-caption-scroll a, cycle-custom-caption-scroll p { color: white; }
-    </style>
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/odometer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/lightgallery.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery.timepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animated-headline.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 </head>
-<body class="antialiased"  id="19823" parent="19822" root="19821">
-    @yield('content')
+<body>
+<!-- Start Preloader -->
+<div class="cs_perloader">
+    <div class="cs_perloader_in">
+        <div class="cs_wave_first">
+            <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg"><path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z" /></svg>
+        </div>
+        <div class="cs_wave_second">
+            <svg enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg"><path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z" /></svg>
+        </div>
+    </div>
+</div>
+<!-- End Preloader -->
+
+@include('layouts.navbar')
 
 
+   <div style="min-height:250px">
+       @yield('content')
+   </div>
 
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_HTML"></script>
-    <script src="/vendor/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
-    <script src="/vendor/jquery.reject.js"></script>
+@include('layouts.footer')
 
-    <script src="/js/header.js"></script>
-    <script src="/js/breadcrumbs.js"></script>
-    <script src="/js/sidenav.js"></script>
-    <script src="/js/accordion.js"></script>
-    <script src="/js/cookies.js"></script>
-    <script src="/js/site.js"></script>
-    <script src="/vendor/arrow.formula.js"></script>
-    <script src="/vendor/bootstrap.bundle.min.js"></script>
-    <script src="/js/rte-anchor.js"></script>
-    <script src="/vendor/bootstrap-table.js"></script>
-    <script src="/vendor/jquery.jcarousel.min.js"></script>
-    <script src="/vendor/jquery.jcarousel-swipe.min.js"></script>
-    <script src="/vendor/jquery.matchHeight.js"></script>
-    <script src="/vendor/jquery.mark.min.js"></script>
-
-    <script type="text/javascript">
-        jQuery(".Content-Wrapper").mark('[, ]', { separateWordSearch: true });
-        $.extend($.fn.bootstrapTable.columnDefaults, {
-            sortable: true
-        });
-
-        $(function() {
-            $('.bootstrapTable').bootstrapTable();
-        });
-
-        jQuery('.SortableTable thead tr th:contains("ID")').addTag;
-    </script>
-
-
-
-
-    <link rel="stylesheet" type="text/css" href="/vendor/jquery.reject.css" />
-    <style type="text/css">
-
-
-
-        @media (min-width: 1200px) {
-            .cycle-wrapper { height: 655px; }
-            .cycle-controls { top: calc(655px - 40px); }
-            .cycle-custom-caption-scroll { max-height: -220px; }
-            .cycle-custom-caption-scroll { max-height: calc(655px - 230px); }
-            .cycle-slide { min-height: 655px; }
-        }
-
-        @media (max-width: 767px) {
-
-            .cycle-custom-caption-wrapper { position: relative; }
-        }
-    </style>
-
-    <script src="/vendor/jquery.cycle2.min.js"></script>
-    <script src="/vendor/jquery.cycle2.swipe.min.js"></script>
-
-    <script type="text/javascript">
-        $(function () {
-            window.initCycleBanner();
-        });
-    </script>
+    <script data-cfasync="false" src="{{ asset('/assets/js/email-decode.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/odometer.js') }}"></script>
+    <script src="{{ asset('/assets/js/isotope.pkg.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/lightgallery.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery.timepicker.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('/assets/js/select2.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/ripples.min.js') }}"></script>
+{{--    <script src="{{ asset('/assets/js/gsap.min.js') }}"></script>--}}
+    <script src="{{ asset('/assets/js/animated-headline.js') }}"></script>
+    <script src="{{ asset('/assets/js/main.js') }}"></script>
 </body>
 </html>
