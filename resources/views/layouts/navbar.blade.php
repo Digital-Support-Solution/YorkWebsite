@@ -11,9 +11,9 @@
                         <ul class="cs_nav_list ">
                             <li><a href="{{ route('appointments') }}">Fees & Appointments</a></li>
                             <li><a href="{{ route('doctors') }}">Doctors</a></li>
-                            <li><a href="{{ route('services') }}">Our Services</a></li>
-                            <li><a href="{{ route('practice') }}">Our Practice</a></li>
-                            <li><a href="{{ route('contacts') }}">Contact Us</a></li>
+                            <li><a href="{{ route('services') }}">Services</a></li>
+                            <li><a href="{{ route('practice') }}">Practice</a></li>
+                            <li><a href="{{ route('contacts') }}">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -40,9 +40,9 @@
 <div class="cs_sidenav">
     <div class="cs_sidenav_overlay"></div>
     <div class="cs_sidenav_in">
-        <button class="cs_close" type="button"><img src="assets/img/icons/close.svg" alt="Close"></button>
+        <button class="cs_close" type="button"><img src="/assets/img/icons/close.svg" alt="Close"></button>
         <div class="cs_logo_box">
-            <img src="assets/img/logo.svg" alt="Logo">
+            <img src="/img/logo.png" alt="Logo">
             <div class="cs_height_15"></div>
             <h3 class="cs_fs_24 cs_semibold mb-0">Your Partner in Health and Wellness</h3>
         </div>
@@ -51,31 +51,35 @@
         <div class="cs_height_70 cs_height_lg_50"></div>
         <div class="cs_iconbox cs_style_11 cs_radius_25">
             <div class="cs_iconbox_icon">
-                <img src="assets/img/contact/icon_1.svg" alt="Icon">
+                <img src="/assets/img/contact/icon_1.svg" alt="Icon">
             </div>
             <div class="cs_iconbox_right">
                 <h3 class="cs_iconbox_title cs_fs_24 mb-0">Phone</h3>
-                <p class="cs_iconbox_subtitle mb-0 cs_heading_color">123-456-7890</p>
+                <p class="cs_iconbox_subtitle mb-0 cs_heading_color">+61 429 091 965</p>
             </div>
         </div>
         <div class="cs_height_30"></div>
         <div class="cs_iconbox cs_style_11 cs_radius_25">
             <div class="cs_iconbox_icon">
-                <img src="assets/img/contact/icon_2.svg" alt="Icon">
+                <img src="/assets/img/contact/icon_2.svg" alt="Icon">
             </div>
             <div class="cs_iconbox_right">
                 <h3 class="cs_iconbox_title cs_fs_24 mb-0">Email</h3>
-                <p class="cs_iconbox_subtitle mb-0 cs_heading_color"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d15181111121e1c11111e181309180f3d1a101c1411531e1210">[email&#160;protected]</a></p>
+                <p class="cs_iconbox_subtitle mb-0 cs_heading_color">
+                    <a href="mailto:admin@yorkgp.com.au" class="__cf_email__">
+                        admin@yorkgp.com.au
+                    </a>
+                </p>
             </div>
         </div>
         <div class="cs_height_30"></div>
         <div class="cs_iconbox cs_style_11 cs_radius_25">
             <div class="cs_iconbox_icon">
-                <img src="assets/img/contact/icon_3.svg" alt="Icon">
+                <img src="/assets/img/contact/icon_3.svg" alt="Icon">
             </div>
             <div class="cs_iconbox_right">
                 <h3 class="cs_iconbox_title cs_fs_24 mb-0">Location</h3>
-                <p class="cs_iconbox_subtitle mb-0 cs_heading_color">123 Anywhere St., Any City, 12345</p>
+                <p class="cs_iconbox_subtitle mb-0 cs_heading_color"></p>
             </div>
         </div>
         <div class="cs_height_60"></div>
@@ -87,8 +91,8 @@
                 <button class="cs_btn cs_style_1">
                     <span>Submit</span>
                     <i>
-                        <img src="assets/img/icons/arrow_white.svg" alt="Icon">
-                        <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                        <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                        <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
                     </i>
                 </button>
             </form>
@@ -120,7 +124,7 @@
                         </svg>
                     </button>
                 </form>
-                <button class="cs_close" type="button"><img src="assets/img/icons/close.svg" alt="Close"></button>
+                <button class="cs_close" type="button"><img src="/assets/img/icons/close.svg" alt="Close"></button>
             </div>
         </div>
     </div>

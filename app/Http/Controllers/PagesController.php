@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -26,4 +27,13 @@ class PagesController extends Controller
         {
             return view('singleDoctors');
         }
+
+    public function services()
+    {
+
+        return view('services',[
+
+            'services' =>Service::all()
+        ]);
+    }
 }

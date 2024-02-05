@@ -1,25 +1,31 @@
 <!-- Start Footer Section -->
-<footer class="cs_footer cs_style_2 cs_type_1 cs_accent_bg cs_white_color">
-    <div class="container">
-        <div class="cs_newsletter cs_style_3">
-            <div class="cs_newsletter_left">
-                <h2 class="cs_newsletter_title cs_white_color">Be Our Subscribers</h2>
-                <p class="cs_newsletter_subtitle mb-0">Join our newsletter to keep up to date <br>health from our experts </p>
-            </div>
-            <div class="cs_newsletter_right">
-                <p>Your Email</p>
-                <form action="#" class="cs_newsletter_form">
-                    <input type="text" class="cs_form_field" placeholder="example@email.com">
-                    <button class="cs_btn cs_style_1">
-                        <span>Submit</span>
-                        <i>
-                            <img src="assets/img/icons/right_arrow_blue.svg" alt="Icon">
-                            <img src="assets/img/icons/right_arrow_blue.svg" alt="Icon">
-                        </i>
-                    </button>
-                </form>
+<footer class="cs_footer cs_style_2 cs_accent_bg cs_white_color">
+
+    <div class="cs_newsletter_1_wrap">
+        <div class="container">
+            <div class="cs_newsletter cs_style_1">
+                <div class="cs_newsletter_left">
+                    <h2 class="cs_newsletter_title">Be Our <br>Subscribers</h2>
+                    <p class="cs_newsletter_subtitle">To get the latest news about health <br> from our experts</p>
+                </div>
+                <div class="cs_newsletter_right">
+                    <p>Your Email</p>
+                    <form action="#" class="cs_newsletter_form">
+                        <input type="text" class="cs_form_field" placeholder="example@email.com">
+                        <button class="cs_btn cs_style_1">
+                            <span>Submit</span>
+                            <i>
+                                <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                                <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                            </i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="container">
+
         <div class="cs_footer_in">
             <div class="cs_footer_col">
                 <div class="cs_footer_item">
