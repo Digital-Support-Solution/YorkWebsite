@@ -17,3 +17,5 @@ Route::view('/our-contacts', 'contacts')->name('contacts');
 
 Route::post('/contact',[PagesController::class,'sendContacts'])->name('SendContacts');
 Route::post('/search',[PagesController::class,'search'])->name('search');
+
+Route::post('/booking',[PagesController::class,'postBooking'])->name('postBooking');

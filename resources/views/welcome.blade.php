@@ -58,107 +58,87 @@
         </div>
     </section>
 
+    @livewire('booking-form')
 
-    <section >
+    <section>
+        <div class="cs_height_200 cs_height_xl_150 cs_height_lg_110"></div>
         <div class="container">
-            <form action="#" class="cs_appointment_form cs_style_1">
-                <div class="cs_appointment_form_head">
-                    <h2 class="cs_fs_40 mb-0">Book Appoinment Now</h2>
-                    <div class="cs_appointment_categories">
-                        <div class="cs_appointment_category">
-                            <input type="radio" name="category" value="Pediatric" checked="">
-                            <span>Pediatric</span>
-                        </div>
-                        <div class="cs_appointment_category">
-                            <input type="radio" name="category" value="Obstetrics">
-                            <span>Obstetrics and Gynecology</span>
-                        </div>
-                        <div class="cs_appointment_category">
-                            <input type="radio" name="category" value="Cardiology">
-                            <span>Cardiology</span>
-                        </div>
-                        <div class="cs_appointment_category">
-                            <input type="radio" name="category" value="Neurology">
-                            <span>Neurology</span>
-                        </div>
+            <div class="row">
+                <div class="col-md-6 col-xl-4">
+                    <div class="cs_section_heading cs_style_1">
+                        <h3 class="cs_section_subtitle text-uppercase cs_accent_color cs_semibold m-0 cs_accent_color cs_fs_32">OUR SERVICES</h3>
+                        <div class="cs_height_5"></div>
+                        <h2 class="cs_section_title cs_fs_72 m-0">Provides Our Best Services</h2>
                     </div>
-                    <div class="cs_appointment_submit d-none d-lg-block">
-                        <button class="cs_btn cs_style_1">
-                            <span>Book Now</span>
-                            <i>
-                                <img src="assets/img/icons/arrow_white.svg" alt="Icon">
-                                <img src="assets/img/icons/arrow_white.svg" alt="Icon">
-                            </i>
-                        </button>
-                    </div>
+                    <div class="cs_height_70 cs_height_lg_50"></div>
                 </div>
-                <div class="cs_appointment_form_fields">
-                    <div class="cs_appointment_form_field">
-                        <div class="cs_appointment_form_icon cs_center rounded-circle cs_accent_bg">
-                            <img src="assets/img/home_3/appointment_icon_1.svg" alt="Icon">
+                <div class="col-md-6 col-xl-4">
+                    <div class="cs_iconbox cs_style_4">
+                        <div class="cs_iconbox_icon cs_accent_bg rounded-circle cs_center">
+                            <img src="assets/img/icons/calendar_white.svg" alt="Icon">
                         </div>
-                        <div class="cs_appointment_form_field_right">
-                            <label>Name</label>
-                            <input type="text" placeholder="David John">
-                        </div>
-                    </div>
-                    <div class="cs_appointment_form_field">
-                        <div class="cs_appointment_form_icon cs_center rounded-circle cs_accent_bg">
-                            <img src="assets/img/home_3/appointment_icon_2.svg" alt="Icon">
-                        </div>
-                        <div class="cs_appointment_form_field_right">
-                            <label>Phone Number</label>
-                            <input type="text" placeholder="(123) 456 - 789">
-                        </div>
-                    </div>
-                    <div class="cs_appointment_form_field">
-                        <div class="cs_appointment_form_icon cs_center rounded-circle cs_accent_bg">
-                            <img src="assets/img/home_3/appointment_icon_3.svg" alt="Icon">
-                        </div>
-                        <div class="cs_appointment_form_field_right">
-                            <label>Medical Record Number</label>
-                            <input type="text" placeholder="123456-7890-0987">
-                        </div>
-                    </div>
-                    <div class="cs_appointment_form_field">
-                        <div class="cs_appointment_form_icon cs_center rounded-circle cs_accent_bg">
-                            <img src="assets/img/home_3/appointment_icon_4.svg" alt="Icon">
-                        </div>
-                        <div class="cs_appointment_form_field_right">
-                            <label>Reason for Visit</label>
-                            <input type="text" placeholder="Routine Checkup">
-                        </div>
-                    </div>
-                    <div class="cs_appointment_form_field">
-                        <div class="cs_appointment_form_icon cs_center rounded-circle cs_accent_bg">
-                            <img src="assets/img/home_3/appointment_icon_5.svg" alt="Icon">
-                        </div>
-                        <div class="cs_appointment_form_field_right">
-                            <label>Preferred Date</label>
-                            <input type="text" placeholder="August 23, 2023" id="datepicker" class="hasDatepicker">
-                        </div>
-                    </div>
-                    <div class="cs_appointment_form_field">
-                        <div class="cs_appointment_form_icon cs_center rounded-circle cs_accent_bg">
-                            <img src="assets/img/home_3/appointment_icon_6.svg" alt="Icon">
-                        </div>
-                        <div class="cs_appointment_form_field_right">
-                            <label>Preferred Time</label>
-                            <input type="text" class="cs_timepicker" placeholder="10:00AM">
-                        </div>
-                    </div>
-                </div>
-                <div class="d-block d-lg-none">
-                    <div class="cs_height_30"></div>
-                    <button class="cs_btn cs_style_1">
-                        <span>Book Now</span>
-                        <i>
+                        <h2 class="cs_iconbox_title cs_fs_32">Diagnostic testing</h2>
+                        <p class="cs_iconbox_subtitle m-0">Blood tests, imaging studies, and other tests to diagnose health conditions</p>
+                        <a href="#" class="cs_iconbox_btn cs_center">
                             <img src="assets/img/icons/arrow_white.svg" alt="Icon">
                             <img src="assets/img/icons/arrow_white.svg" alt="Icon">
-                        </i>
-                    </button>
+                        </a>
+                    </div>
                 </div>
-            </form>
+                <div class="col-md-6 col-xl-4">
+                    <div class="cs_iconbox cs_style_4">
+                        <div class="cs_iconbox_icon cs_accent_bg rounded-circle cs_center">
+                            <img src="assets/img/icons/calendar_white.svg" alt="Icon">
+                        </div>
+                        <h2 class="cs_iconbox_title cs_fs_32">Rehabilitation services</h2>
+                        <p class="cs_iconbox_subtitle m-0">Physical therapy, occupational therapy, and other services to help patients recover from injuries</p>
+                        <a href="#" class="cs_iconbox_btn cs_center">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="cs_iconbox cs_style_4">
+                        <div class="cs_iconbox_icon cs_accent_bg rounded-circle cs_center">
+                            <img src="assets/img/icons/calendar_white.svg" alt="Icon">
+                        </div>
+                        <h2 class="cs_iconbox_title cs_fs_32">Preventive care</h2>
+                        <p class="cs_iconbox_subtitle m-0">Annual checkups, immunizations, and health screenings care preventive</p>
+                        <a href="#" class="cs_iconbox_btn cs_center">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="cs_iconbox cs_style_4">
+                        <div class="cs_iconbox_icon cs_accent_bg rounded-circle cs_center">
+                            <img src="assets/img/icons/calendar_white.svg" alt="Icon">
+                        </div>
+                        <h2 class="cs_iconbox_title cs_fs_32">Treatment for acute and chronic conditions</h2>
+                        <p class="cs_iconbox_subtitle m-0">Medication management, disease management, and other treatments to improve health outcomes</p>
+                        <a href="#" class="cs_iconbox_btn cs_center">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="cs_iconbox cs_style_4">
+                        <div class="cs_iconbox_icon cs_accent_bg rounded-circle cs_center">
+                            <img src="assets/img/icons/calendar_white.svg" alt="Icon">
+                        </div>
+                        <h2 class="cs_iconbox_title cs_fs_32">Mental health services</h2>
+                        <p class="cs_iconbox_subtitle m-0">Counseling, therapy, and other services to help patients manage mental health conditions</p>
+                        <a href="#" class="cs_iconbox_btn cs_center">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                            <img src="assets/img/icons/arrow_white.svg" alt="Icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
 @endsection

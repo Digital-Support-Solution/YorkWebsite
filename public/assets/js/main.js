@@ -597,7 +597,7 @@
   --------------------------------------------------------------*/
   function timeAndDatePicker() {
     $('.cs_timepicker').timepicker({
-      minTime: '9:00am',
+      minTime: '04:00am',
       maxTime: '11:00pm',
     });
     $('#datepicker').datepicker();

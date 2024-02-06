@@ -18,6 +18,17 @@
     <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animated-headline.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <style>
+        ._13px{
+            font-size: 13px !important;
+        }
+
+        .border-bottom-red{
+            border-bottom: 1px solid red !important;
+        }
+    </style>
+
+    @livewireStyles
 </head>
 <body>
 <!-- Start Preloader -->
@@ -42,7 +53,7 @@
 
 @include('layouts.footer')
 
-    <script data-cfasync="false" src="{{ asset('/assets/js/email-decode.min.js') }}"></script>
+{{--    <script data-cfasync="false" src="{{ asset('/assets/js/email-decode.min.js') }}"></script>--}}
     <script src="{{ asset('/assets/js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('/assets/js/wow.min.js') }}"></script>
     <script src="{{ asset('/assets/js/slick.min.js') }}"></script>
@@ -53,8 +64,13 @@
     <script src="{{ asset('/assets/js/jquery-ui.js') }}"></script>
     <script src="{{ asset('/assets/js/select2.min.js') }}"></script>
     <script src="{{ asset('/assets/js/ripples.min.js') }}"></script>
-{{--    <script src="{{ asset('/assets/js/gsap.min.js') }}"></script>--}}
+    <script src="{{ asset('/assets/js/gsap.min.js') }}"></script>
     <script src="{{ asset('/assets/js/animated-headline.js') }}"></script>
     <script src="{{ asset('/assets/js/main.js') }}"></script>
+    @livewireScripts
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <x-livewire-alert::scripts />
+
 </body>
 </html>
