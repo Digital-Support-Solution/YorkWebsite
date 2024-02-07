@@ -3,7 +3,7 @@
 
 use App\Http\Controllers\PagesController;
 
-Route::view('/', 'welcome')->name('welcome');
+Route::get('/', [PagesController::class,'index'])->name('welcome');
 Route::view('/fees-appointments', 'appointments')->name('appointments');
 
 Route::get('/our-doctors', [PagesController::class,'doctors'])->name('doctors');
@@ -19,3 +19,6 @@ Route::post('/contact',[PagesController::class,'sendContacts'])->name('SendConta
 Route::post('/search',[PagesController::class,'search'])->name('search');
 
 Route::post('/booking',[PagesController::class,'postBooking'])->name('postBooking');
+
+Route::get('/blogs',[PagesController::class,'blogs'])->name('blogs');
+Route::get('/blogs/{slug}',[PagesController::class,'singleBlog'])->name('singleBlog');
