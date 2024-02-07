@@ -22,7 +22,7 @@
                         <a href="{{ route('about') }}" class="cs_text_btn">York General Practice</a>
                     </div>
                     <p class="cs_hero_subtitle cs_white_color">
-                        Our independent doctors are experienced in every aspect of family health and can help you at any stage of life. 
+                        Our independent doctors are experienced in every aspect of family health and can help you at any stage of life.
                     </p>
                 </div>
             </div>
