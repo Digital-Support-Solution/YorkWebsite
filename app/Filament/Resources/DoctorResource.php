@@ -70,7 +70,9 @@ class DoctorResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('doctor_image'),
-                Tables\Columns\TextColumn::make('qualifications')->searchable(),
+                Tables\Columns\TextColumn::make('qualifications')
+                    ->limit(50)
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('doctor_name')->searchable(),
             ])
 
