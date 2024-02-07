@@ -6,12 +6,15 @@ use App\Filament\Resources\AppointmentResource\Pages;
 use App\Filament\Resources\AppointmentResource\RelationManagers;
 use App\Models\Appointment;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Str;
 
 class AppointmentResource extends Resource
 {
@@ -25,7 +28,12 @@ class AppointmentResource extends Resource
             ->schema([
 
                 Forms\Components\FileUpload::make('image'),
-                Forms\Components\TextInput::make('title')->required(),
+                Forms\Components\TextInput::make('title')
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
+                    ->required(),
+
+                TextInput::make('slug')->readOnly()->columnSpan(2),
                 Forms\Components\RichEditor::make('description')
                     ->required()
                     ->columnSpan(2),
