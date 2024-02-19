@@ -45,7 +45,8 @@ class FeeResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()->button(),
+                Tables\Actions\DeleteAction::make()->button(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

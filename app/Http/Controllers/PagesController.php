@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
 use App\Models\Blog;
 use App\Models\CoreValue;
+use App\Models\Fee;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Testimonial;
@@ -58,5 +60,12 @@ class PagesController extends Controller
     {
 
 
+    }
+
+    public function appointments(){
+        return view('appointments',[
+            'appointments' => Appointment::get(),
+            'fees' => Fee::get(),
+        ]);
     }
 }

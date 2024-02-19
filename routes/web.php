@@ -4,7 +4,7 @@
 use App\Http\Controllers\PagesController;
 
 Route::get('/', [PagesController::class,'index'])->name('welcome');
-Route::view('/fees-appointments', 'appointments')->name('appointments');
+Route::get('/fees-appointments',[PagesController::class,'appointments'])->name('appointments');
 
 Route::get('/our-doctors', [PagesController::class,'doctors'])->name('doctors');
 Route::get('/our-doctors/{slug}', [PagesController::class,'singleDoctors'])->name('singleDoctors');
