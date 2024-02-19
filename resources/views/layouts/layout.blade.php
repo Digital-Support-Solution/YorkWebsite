@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animated-headline.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    @vite(["resources/views/*"])
+{{--    @vite(["resources/views/*"])--}}
     <style>
         ._13px{
             font-size: 13px !important;
