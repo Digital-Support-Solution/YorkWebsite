@@ -8222,7 +8222,7 @@ a.ui-button:active,
 .cs_hero.cs_style_1 .cs_hero_wrap {
   height: 100%;
   width: 100%;
-  padding-top: 248px;
+  padding-top: 148px;
   position: relative;
 }
 @media (max-width: 1300px) {
@@ -8376,7 +8376,7 @@ a.ui-button:active,
 }
 .cs_hero.cs_style_1 .cs_hero_img {
   position: absolute;
-  bottom: -10px;
+  bottom: 120px;
   right: 6%;
   max-height: 86%;
 }

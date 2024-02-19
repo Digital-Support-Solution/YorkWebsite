@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Appointment;
 use App\Models\Blog;
 use App\Models\CoreValue;
+use App\Models\Doctor;
 use App\Models\Fee;
 use App\Models\Service;
 use App\Models\Setting;
@@ -40,7 +41,9 @@ class PagesController extends Controller
 
     public function doctors()
     {
-        return view('doctors');
+        return view('doctors',[
+            'doctors' => Doctor::orderBy('doctor_name','DESC')->get()
+        ]);
     }
 
     public function singleDoctors($slug)

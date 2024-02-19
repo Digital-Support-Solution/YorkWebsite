@@ -7,7 +7,7 @@ Route::get('/', [PagesController::class,'index'])->name('welcome');
 Route::get('/fees-appointments',[PagesController::class,'appointments'])->name('appointments');
 
 Route::get('/our-doctors', [PagesController::class,'doctors'])->name('doctors');
-Route::get('/our-doctors/{slug}', [PagesController::class,'singleDoctors'])->name('singleDoctors');
+Route::get('/our-doctors/{slug}', [PagesController::class,'singleDoctors'])->name('singleDoctor');
 
 
 Route::get('/our-services', [PagesController::class,'services'])->name('services');
