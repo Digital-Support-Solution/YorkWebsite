@@ -12,6 +12,15 @@
                 <p class="cs_hero_subtitle cs_white_color cs_fs_20 m-0">
                     At YorkGP, we prioritize our patient's health and well-being, and we strive to provide compassionate care with exceptional results.
                 </p>
+                <div class="cs_height_25 cs_height_xl_25 cs_height_lg_25"></div>
+                <a href="{{ route('contacts') }}" class="cs_btn cs_style_1">
+                    <span>Contact Us</span>
+                    <i>
+                        <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                        <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                    </i>
+                </a>
+
             </div>
         </div>
     </section>
@@ -52,7 +61,7 @@
                     <div class="cs_isotop_item emergency">
                         <div class="cs_team cs_style_1 cs_type_2 text-center cs_radius_20 overflow-hidden">
                             <div class="cs_member_img">
-                                <a href="{{ route('singleDoctor', $doctor->id) }}" class="d-block">
+                                <a href="{{ route('singleDoctor', $doctor->slug) }}" class="d-block">
                                     <img src="/storage/{{ $doctor->doctor_image }}" alt="{{ $doctor->doctor_name }}">
                                 </a>
                                 <div class="cs_label cs_white_color cs_accent_bg"></div>
@@ -60,7 +69,7 @@
                             <div class="cs_team_meta cs_white_bg">
                                 <div>
                                     <h3 class="cs_member_name cs_fs_32">
-                                        <a href="{{ route('singleDoctor', $doctor->id) }}">{{ $doctor->doctor_name }}</a>
+                                        <a href="{{ route('singleDoctor', $doctor->slug) }}">{{ $doctor->doctor_name }}</a>
                                     </h3>
                                     <p class="cs_member_designation cs_heading_color cs_medium">
                                         {{ $doctor->qualifications }}

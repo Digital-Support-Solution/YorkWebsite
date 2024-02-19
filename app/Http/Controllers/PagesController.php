@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\CoreValue;
 use App\Models\Doctor;
 use App\Models\Fee;
+use App\Models\Practice;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Testimonial;
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Validator;
 
 class PagesController extends Controller
 {
+
+
     public function index()
     {
        return view('welcome',[
@@ -34,11 +37,6 @@ class PagesController extends Controller
     }
 
 
-    public function sendContacts(Request $request)
-    {
-        return $request->all();
-    }
-
     public function doctors()
     {
         return view('doctors',[
@@ -48,7 +46,9 @@ class PagesController extends Controller
 
     public function singleDoctors($slug)
     {
-        return view('singleDoctors');
+        return view('singleDoctors',[
+            'doctor' => Doctor::where('slug',$slug)->with('appointments')->firstOrFail()
+        ]);
     }
 
     public function services()
@@ -58,11 +58,19 @@ class PagesController extends Controller
         ]);
     }
 
-
-    public function postBooking(Request $request)
+    public function serviceSingle($slug)
     {
+        return view('singleService',[
+            'service' => Service::where('slug', $slug)->firstOrFail()
+        ]);
 
+    }
 
+    public function practice()
+    {
+        return view('practice', [
+            'practices' => Practice::all()
+        ]);
     }
 
     public function appointments(){

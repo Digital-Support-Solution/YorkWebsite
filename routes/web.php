@@ -11,7 +11,9 @@ Route::get('/our-doctors/{slug}', [PagesController::class,'singleDoctors'])->nam
 
 
 Route::get('/our-services', [PagesController::class,'services'])->name('services');
-Route::view('/our-practice', 'practice')->name('practice');
+Route::get('/our-services/{service}', [PagesController::class,'serviceSingle'])->name('serviceSingle');
+
+Route::get('/our-practice', [PagesController::class,'practice'])->name('practice');
 Route::view('/about-us', 'about')->name('about');
 Route::view('/our-contacts', 'contacts')->name('contacts');
 

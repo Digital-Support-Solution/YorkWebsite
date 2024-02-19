@@ -1,66 +1,58 @@
 @extends('layouts.layout')
 
 @section('content')
-    <section>
-        <div class="cs_height_160 cs_height_xl_110 cs_height_lg_70"></div>
+    <!-- Start Banner  -->
+    <section class="cs_banner cs_style_5 cs_bg_filed" data-src="assets/img/doctors/banner_bg.svg">
+        <div class="cs_banner_img">
+            <img src="assets/img/doctors/banner_img.png" alt="Banner Image">
+        </div>
         <div class="container">
-            <div class="cs_section_heading cs_style_1 text-center">
-                <h3 class="cs_section_subtitle text-uppercase cs_accent_color cs_semibold m-0 cs_accent_color cs_fs_32">BLOG POSTS</h3>
-                <div class="cs_height_5"></div>
-                <h2 class="cs_section_title cs_fs_72 m-0">Latest Update</h2>
-            </div>
-            <div class="cs_height_70 cs_height_lg_50"></div>
-            <div class="row cs_gap_y_24">
-                <div class="col-lg-6">
-                    <div class="cs_post_pr_136">
-                        <div class="cs_post cs_style_1 cs_type_2">
-                            <a href="blog-details.html" class="cs_post_thumb cs_view_mouse"><img src="assets/img/home_3/blog_1.jpg" alt="Post"></a>
-                            <div class="cs_post_info">
-                                <div>
-                                    <h2 class="cs_post_title cs_semibold cs_fs_32"><a href="blog-details.html">The Benefits of Mindfulness Meditation for Stress and  Anxiety</a></h2>
-                                </div>
-                                <div class="cs_post_meta">
-                                    <div class="cs_posted_by">May 1, 2023</div>
-                                    <div class="cs_post_social">
-                                        <a href="#" class="cs_center rounded-circle"><i class="fa-brands fa-linkedin-in"></i></a>
-                                        <a href="#" class="cs_center rounded-circle"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#" class="cs_center rounded-circle"><i class="fa-brands fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="cs_post cs_style_2 cs_radius_20 overflow-hidden">
-                        <a href="blog-details.html" class="cs_post_thumb cs_view_mouse"><img src="assets/img/home_3/blog_2.jpg" alt="Post"></a>
-                        <div class="cs_post_info">
-                            <div>
-                                <h2 class="cs_post_title cs_semibold cs_fs_24"><a href="blog-details.html">Understanding Chronic Fatigue Syndrome: Symptoms, Causes, and Treatment</a></h2>
-                                <div class="cs_posted_by">May 1, 2023</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cs_post cs_style_2 cs_radius_20 overflow-hidden">
-                        <a href="blog-details.html" class="cs_post_thumb cs_view_mouse"><img src="assets/img/home_3/blog_3.jpg" alt="Post"></a>
-                        <div class="cs_post_info">
-                            <div>
-                                <h2 class="cs_post_title cs_semibold cs_fs_24"><a href="blog-details.html">The Importance of Regular Cancer Screenings and Early Detection</a></h2>
-                                <div class="cs_posted_by">August 24, 2023</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cs_post cs_style_2 cs_radius_20 overflow-hidden">
-                        <a href="blog-details.html" class="cs_post_thumb cs_view_mouse"><img src="assets/img/home_3/blog_4.jpg" alt="Post"></a>
-                        <div class="cs_post_info">
-                            <div>
-                                <h2 class="cs_post_title cs_semibold cs_fs_24"><a href="blog-details.html">Managing Chronic Pain: Tips and Strategies for a Better Quality of Life</a></h2>
-                                <div class="cs_posted_by">September 11, 2023</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="cs_banner_text">
+                <h2 class="cs_banner_title cs_fs_72">Our  Services</h2>
+                <p class="cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color">
+                    York General Practice has a treatment room and procedure room. Here are some of the main services we provide.
+                </p>
+
+                <div class="cs_height_25 cs_height_xl_25 cs_height_lg_25"></div>
+                <a href="{{ route('contacts') }}" class="cs_btn cs_style_1">
+                    <span>Contact Us</span>
+                    <i>
+                        <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                        <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                    </i>
+                </a>
             </div>
         </div>
     </section>
+    <!-- End Banner  -->
+
+    <!-- Start Detartments -->
+    <section>
+        <div class="container cs_mt_minus_110">
+            <div class="row justify-content-end">
+                @if(count($services) > 0)
+                    @foreach($services as $service)
+                        <div class="col-xl-4 col-md-6">
+                            <div class="cs_iconbox cs_style_7">
+                                <div class="cs_iconbox_icon">
+                                    <img src="/assets/img/departments/icon_1.svg" alt="Icon">
+                                </div>
+                                <h2 class="cs_iconbox_title cs_fs_32">
+                                    {{ $service->title }}
+                                </h2>
+                                <p class="cs_iconbox_subtitle m-0">
+                                    {!! Str::limit($service->description, 100) !!} ff
+                                </p>
+                                <a href="{{ route('serviceSingle',$service->slug) }}" class="cs_iconbox_btn cs_center">
+                                    <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                                    <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+            </div>
+        </div>
+    </section>
+    <!-- End Detartments -->
 @endsection
