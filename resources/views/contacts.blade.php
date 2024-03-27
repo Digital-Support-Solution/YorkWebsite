@@ -35,7 +35,11 @@
                         </div>
                         <div class="cs_iconbox_right">
                             <h3 class="cs_iconbox_title cs_fs_24 mb-0">Phone</h3>
-                            <p class="cs_iconbox_subtitle mb-0 cs_heading_color"><a href="tell:+61429091965">+61 429 091 965</a></p>
+                            <p class="cs_iconbox_subtitle mb-0 cs_heading_color">
+                                <a href="tel:{{ $settings->phone_1 }}" class="__cf_email__" >{{ $settings->phone_1 }}</a>
+                                <br>
+                                <a href="tel:{{ $settings->phone_2 }}" class="__cf_email__" >{{ $settings->phone_2 }}</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -47,7 +51,9 @@
                         <div class="cs_iconbox_right">
                             <h3 class="cs_iconbox_title cs_fs_24 mb-0">Email</h3>
                             <p class="cs_iconbox_subtitle mb-0 cs_heading_color">
-                                <a href="mailto:admin@yorkgp.com.au" class="__cf_email__">admin@yorkgp.com.au</a></p>
+                                <a href="mail:{{$settings->email_1 }}" class="__cf_email__" >{{ $settings->email_1 }}</a>
+                                <br>
+                                <a href="mail:{{$settings->email_2 }}" class="__cf_email__" >{{ $settings->email_2 }}</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +64,9 @@
                         </div>
                         <div class="cs_iconbox_right">
                             <h3 class="cs_iconbox_title cs_fs_24 mb-0">Location</h3>
-                            <p class="cs_iconbox_subtitle mb-0 cs_heading_color"></p>
+                            <p class="cs_iconbox_subtitle mb-0 cs_heading_color">
+                                {{ $settings->address }}
+                            </p>
                         </div>
                     </div>
                 </div>

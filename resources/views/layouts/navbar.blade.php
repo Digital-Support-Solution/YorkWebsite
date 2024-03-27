@@ -55,7 +55,11 @@
             </div>
             <div class="cs_iconbox_right">
                 <h3 class="cs_iconbox_title cs_fs_24 mb-0">Phone</h3>
-                <p class="cs_iconbox_subtitle mb-0 cs_heading_color">+61 429 091 965</p>
+                <p class="cs_iconbox_subtitle mb-0 cs_heading_color">
+                    <a href="tel:{{ $settings->phone_1 }}" class="__cf_email__" >{{ $settings->phone_1 }}</a>
+                    <br>
+                    <a href="tel:{{ $settings->phone_2 }}" class="__cf_email__" >{{ $settings->phone_2 }}</a>
+                </p>
             </div>
         </div>
         <div class="cs_height_30"></div>
@@ -66,9 +70,9 @@
             <div class="cs_iconbox_right">
                 <h3 class="cs_iconbox_title cs_fs_24 mb-0">Email</h3>
                 <p class="cs_iconbox_subtitle mb-0 cs_heading_color">
-                    <a href="mailto:admin@yorkgp.com.au" class="__cf_email__">
-                        admin@yorkgp.com.au
-                    </a>
+                    <a href="mail:{{$settings->email_1 }}" class="__cf_email__" >{{ $settings->email_1 }}</a>
+                    <br>
+                    <a href="mail:{{$settings->email_2 }}" class="__cf_email__" >{{ $settings->email_2 }}</a>
                 </p>
             </div>
         </div>
@@ -79,7 +83,9 @@
             </div>
             <div class="cs_iconbox_right">
                 <h3 class="cs_iconbox_title cs_fs_24 mb-0">Location</h3>
-                <p class="cs_iconbox_subtitle mb-0 cs_heading_color"></p>
+                <p class="cs_iconbox_subtitle mb-0 cs_heading_color">
+                    {{ $settings->address }}
+                </p>
             </div>
         </div>
         <div class="cs_height_60"></div>
@@ -103,11 +109,12 @@
         <div class="cs_social_links_wrap">
             <h2>Follow Us</h2>
             <div class="cs_social_links">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                @if($settings->facebook) <a target="_blank" href="{{ $settings->facebook }}"><i class="fa-brands fa-facebook-f"></i></a> @endif
+                @if($settings->youtube) <a target="_blank" href="{{ $settings->youtube }}"><i class="fa-brands fa-youtube"></i></a> @endif
+                @if($settings->linkedin) <a target="_blank" href="{{ $settings->linkedin }}"><i class="fa-brands fa-linkedin-in"></i></a> @endif
+                @if($settings->twitter) <a target="_blank" href="{{ $settings->twitter }}"><i class="fa-brands fa-twitter"></i></a>@endif
+                @if($settings->instagram) <a target="_blank" href="{{ $settings->instagram }}"><i class="fa-brands fa-instagram"></i></a>@endif
+
             </div>
         </div>
     </div>
