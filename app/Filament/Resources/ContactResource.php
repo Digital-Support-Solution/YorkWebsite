@@ -26,7 +26,7 @@ class ContactResource extends Resource
                 Forms\Components\TextInput::make('name')->required(),
                 Forms\Components\TextInput::make('email')->required(),
                 Forms\Components\TextInput::make('subject')->required(),
-                Forms\Components\TextInput::make('message')->required(),
+                Forms\Components\Textarea::make('message')->rows(5)->required(),
             ]);
     }
 
