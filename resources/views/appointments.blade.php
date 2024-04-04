@@ -1,21 +1,30 @@
 @extends('layouts.layout')
 
 @section('content')
-<section class="cs_banner cs_style_3 cs_bg_filed" data-src="/assets/img/appointments/banner_bg.svg">
+<section class="app-bg cs_banner cs_style_3 cs_bg_filed" data-src="/assets/img/appointments/banner_bg.svg">
     <div class="cs_banner_img">
-      <img src="assets/img/appointments/banner_img.png" alt="Banner Image">
+      <img src="/assets/img/appointments/banner_img.png" alt="Banner Image">
     </div>
     <div class="container">
       <div class="cs_banner_text">
-        <h2 class="cs_banner_title cs_fs_72">Don’t Let Your Health Take a Backseat!</h2>
-        <p class="cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color">
+        <h2 class="text-white cs_banner_title cs_fs_72">Don’t Let Your Health Take a Backseat!</h2>
+        <p class="text-white cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color">
             Fill out the appointment form below to schedule a consultation with one of our healthcare professionals.
         </p>
 
-        <p class="cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color mt-3">
+        <p class="text-white cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color mt-3 mb-3">
             Learn more about our fees and payments.
         </p>
+
+          <a href="#appointment" class="cs_btn cs_style_1"  >
+              <span>Book Now</span>
+              <i>
+                  <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                  <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+              </i>
+          </a>
       </div>
+
     </div>
 </section>
   <!-- End Banner  -->

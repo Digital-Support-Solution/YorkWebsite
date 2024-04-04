@@ -2,13 +2,13 @@
 
 @section('content')
     <!-- Start Banner  -->
-    <section class="cs_banner cs_style_5 cs_bg_filed" data-src="assets/img/contact/banner_bg.svg">
+    <section class="app-bg cs_banner cs_style_5 cs_bg_filed" data-src="assets/img/contact/banner_bg.svg">
         <div class="cs_banner_img">
             <img src="/assets/img/contact/banner_img.png" alt="Banner Image" class="cs_main_banner_img">
         </div>
         <div class="container">
-            <h2 class="cs_banner_title cs_fs_72">Contact Us</h2>
-            <p class="cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color">Kindly reach us to get the fastest response and treatment</p>
+            <h2 class="text-white cs_banner_title cs_fs_72 mt-12">Contact Us</h2>
+            <p class="text-white cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color">Kindly reach us to get the fastest response and treatment</p>
         </div>
     </section>
     <!-- End Banner  -->

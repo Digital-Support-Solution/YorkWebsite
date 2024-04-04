@@ -27,9 +27,12 @@
 
         gtag('config', 'G-SWK15WT1SG');
     </script>
-{{--   @vite(["resources/views/*"])--}}
+   @vite(["resources/views/*"])
 
-    <style>._13px{  font-size: 13px !important; }.border-bottom-red{  border-bottom: 1px solid red !important;  }.border-all-red{  border: 1px solid red !important; }</style>
+    <style>
+        .app-bg{ background: linear-gradient(-89deg, #274760 0.95%, rgba(39, 71, 96, 0.59) 98.78%) !important;
+        }
+        ._13px{  font-size: 13px !important; }.border-bottom-red{  border-bottom: 1px solid red !important;  }.border-all-red{  border: 1px solid red !important; }</style>
     @livewireStyles
 </head>
 <body>

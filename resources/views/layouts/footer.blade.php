@@ -125,7 +125,7 @@
     </div>
     <div class="cs_footer_bottom">
         <div class="container">
-            <div class="cs_copyright">Copyright © {{ date('Y') }} Omni-Creatives. All rights reserved.</div>
+            <div class="cs_copyright"> Designed By <a target="_blank" href="http://omni-learning.com">Omni-Creatives</a>.</div>
         </div>
     </div>
 </footer>

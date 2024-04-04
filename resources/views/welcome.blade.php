@@ -26,30 +26,50 @@
         <div class="cs_hero_img">
             <img src="assets/img/home_5/hero_img.png" alt="Hero">
         </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                    <div class="cs_hero_funfact text-center">
+                    <div class="cs_hero_funfact text-center ">
                         <div class="cs_hero_funfact_col">
-                            <h3 class="cs_white_color cs_fs_72"><span class="odometer" data-count-to="5"></span>+</h3>
-                            <p class="cs_white_color mb-0">Years of experience</p>
+                            <h3 class="cs_white_color cs_fs_72">
+                                <img style="filter: brightness(0) invert(1); height: 30px" src="/assets/img/contact/icon_1.svg" alt="Icon">
+                            </h3>
+                            <p class="cs_white_color mb-0">
+                                <a href="tel:{{ $settings->phone_1 }}" class="__cf_email__" >{{ $settings->phone_1 }}</a>
+                            </p>
                         </div>
                         <div class="cs_hero_funfact_col">
-                            <h3 class="cs_white_color cs_fs_72"><span class="odometer" data-count-to="95"></span>%</h3>
-                            <p class="cs_white_color mb-0">Patient satisfaction rating</p>
+                            <h3 class="cs_white_color cs_fs_72">
+                                <img style="filter: brightness(0) invert(1); height: 30px" src="/assets/img/icons/pin.svg" alt="Icon">
+                            </h3>
+                            <p class="cs_white_color mb-0">
+                                {{ $settings->address }}
+                            </p>
                         </div>
                         <div class="cs_hero_funfact_col">
-                            <h3 class="cs_white_color cs_fs_72"><span class="odometer" data-count-to="500"></span>+</h3>
-                            <p class="cs_white_color mb-0">Patients served annually</p>
+                            <h3 class="cs_white_color cs_fs_72">
+                                <img style="filter: brightness(0) invert(1); height: 30px"  src="assets/img/contact/icon_2.svg" alt="Icon">
+                            </h3>
+                            <p class="cs_white_color mb-0">
+                                <a href="mail:{{$settings->email_1}}" class="__cf_email__" >{{ $settings->email_1 }}</a>
+                            </p>
                         </div>
-                        <div class="cs_hero_funfact_col">
-                            <h3 class="cs_white_color cs_fs_72"><span class="odometer" data-count-to="10"></span>+</h3>
-                            <p class="cs_white_color mb-0">Healthcare providers on staff</p>
+                        <div class="cs_hero_funfact_col" >
+                            <a href="#appointment" class="cs_btn cs_style_1" style="margin-top: 20%">
+                                <span>Book Now</span>
+                                <i>
+                                    <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                                    <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
+                                </i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </section>
     <!-- End Hero -->
 

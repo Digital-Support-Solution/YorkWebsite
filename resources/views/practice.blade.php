@@ -2,15 +2,15 @@
 
 @section('content')
     <!-- Start Banner  -->
-    <section class="cs_banner cs_style_3 cs_bg_filed" data-src="assets/img/pricing_plan/banner_bg.svg">
+    <section class="app-bg cs_banner cs_style_3 cs_bg_filed" data-src="assets/img/pricing_plan/banner_bg.svg">
         <div class="cs_banner_img">
             <img src="assets/img/pricing_plan/banner_img.png" alt="Banner Image">
         </div>
         <div class="container">
             <div class="cs_banner_text">
-                <h2 class="cs_banner_title cs_fs_72">Our Practice at <br> York General Practice</h2>
-                <p class="cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color">
-                    Explore Our Membership Options and Start Your Journey to Better Health
+                <h2 class="text-white cs_banner_title cs_fs_72">Our Practice at <br> York General Practice</h2>
+                <p class="text-white cs_banner_subtitle cs_fs_20 mb-0 cs_heading_color">
+                    Explore list of our practice start your journey to better Health
                 </p>
                 <div class="cs_height_25 cs_height_xl_25 cs_height_lg_25"></div>
                 <a href="{{ route('contacts') }}" class="cs_btn cs_style_1">
@@ -62,10 +62,7 @@
                     <div class="cs_about cs_style_1 cs_type_2">
                         <div class="cs_about_img">
                             <img src="/assets/img/home_4/faq_img.jpg" alt="About" class="w-100">
-                            <div class="cs_about_mini_img">
-                                <img src="/assets/img/home_1/about_mini.svg" alt="Mini" class="cs_rotate_animation">
-                                <img src="/assets/img/icons/tick.svg" alt="Right" class="cs_right_icon">
-                            </div>
+
                         </div>
                     </div>
                 </div>
