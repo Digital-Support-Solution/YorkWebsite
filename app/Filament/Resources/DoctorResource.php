@@ -40,7 +40,7 @@ class DoctorResource extends Resource
                         ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
                         ->required(),
 
-                    TextInput::make('slug')->readOnly()->columnSpan(2),
+                    TextInput::make('slug')->columnSpan(2),
 
                     Forms\Components\TextInput::make('qualifications')
                         ->columnSpan(2)
