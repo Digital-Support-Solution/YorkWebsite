@@ -20,7 +20,7 @@
 </section>
   <!-- End Banner  -->
 
-  @livewire('booking-form')
+{{--  @livewire('booking-form')--}}
 
 
   <section>

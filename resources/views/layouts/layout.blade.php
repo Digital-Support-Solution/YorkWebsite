@@ -18,23 +18,18 @@
     <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animated-headline.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWK15WT1SG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-
+        gtag('config', 'G-SWK15WT1SG');
+    </script>
 {{--   @vite(["resources/views/*"])--}}
 
-    <style>
-        ._13px{
-            font-size: 13px !important;
-        }
-
-        .border-bottom-red{
-            border-bottom: 1px solid red !important;
-        }
-
-        .border-all-red{
-            border: 1px solid red !important;
-        }
-    </style>
+    <style>._13px{  font-size: 13px !important; }.border-bottom-red{  border-bottom: 1px solid red !important;  }.border-all-red{  border: 1px solid red !important; }</style>
     @livewireStyles
 </head>
 <body>

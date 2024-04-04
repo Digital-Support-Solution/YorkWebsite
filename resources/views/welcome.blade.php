@@ -9,11 +9,7 @@
                 <h1 class="cs_hero_title cs_white_color cs_fs_84">Take Best Treatment with Our
                     <span class="cd-headline slide cs_accent_color">
               <span class="cd-words-wrapper">
-                <b class="is-visible">Dentist</b>
-                <b>Crutches</b>
-                <b>Laboratory</b>
-                <b>Cardiology</b>
-                <b>Neurology</b>
+                <b class="is-visible">GPs</b>
               </span>
             </span>
                 </h1>
@@ -57,7 +53,7 @@
     </section>
     <!-- End Hero -->
 
-    @livewire('booking-form')
+
 
     <section>
         <div class="cs_height_200 cs_height_xl_150 cs_height_lg_110"></div>
@@ -110,8 +106,6 @@
                     <div class="cs_about_img">
                         <img src="assets/img/home_3/about.png" alt="About">
                         <div class="cs_about_mini_img">
-                            <img src="assets/img/home_1/about_mini.svg" alt="Mini" class="cs_rotate_animation">
-                            <img src="assets/img/icons/tick.svg" alt="Right" class="cs_right_icon">
                         </div>
                     </div>
                 </div>
@@ -120,7 +114,7 @@
                         <div class="cs_section_heading cs_style_1">
                             <h3 class="cs_section_subtitle text-uppercase cs_accent_color cs_semibold m-0 cs_accent_color cs_fs_32">ABOUT US</h3>
                             <div class="cs_height_5"></div>
-                            <h2 class="cs_section_title cs_fs_72 m-0">ProHealth is a team of experienced medical professionals</h2>
+                            <h2 class="cs_section_title cs_fs_72 m-0">York GP is a team of experienced medical professionals</h2>
                             <div class="cs_height_85 cs_height_xl_50"></div>
                             <p class="mb-0">Dedicated to providing top-quality healthcare services. We believe in a <br> holistic approach to healthcare that focuses on treating the whole <br>person, not just the illness or symptoms.</p>
                         </div>
