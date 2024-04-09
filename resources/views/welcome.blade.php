@@ -56,7 +56,7 @@
                             </p>
                         </div>
                         <div class="cs_hero_funfact_col" >
-                            <a href="#appointment" class="cs_btn cs_style_1" style="margin-top: 20%">
+                            <a href="{{ route('bookings') }}" class="cs_btn cs_style_1" style="margin-top: 20%">
                                 <span>Book Now</span>
                                 <i>
                                     <img src="/assets/img/icons/arrow_white.svg" alt="Icon">

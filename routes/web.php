@@ -24,3 +24,5 @@ Route::post('/booking',[PagesController::class,'postBooking'])->name('postBookin
 
 Route::get('/blogs',[PagesController::class,'blogs'])->name('blogs');
 Route::get('/blogs/{slug}',[PagesController::class,'singleBlog'])->name('singleBlog');
+
+Route::view('/bookings','booking')->name('bookings');

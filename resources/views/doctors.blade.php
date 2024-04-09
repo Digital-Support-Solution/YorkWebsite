@@ -13,8 +13,8 @@
                     At YorkGP, we prioritize our patient's health and well-being, and we strive to provide compassionate care with exceptional results.
                 </p>
                 <div class="cs_height_25 cs_height_xl_25 cs_height_lg_25"></div>
-                <a href="{{ route('contacts') }}" class="cs_btn cs_style_1">
-                    <span>Contact Us</span>
+                <a href="{{ route('bookings') }}" class="cs_btn cs_style_1">
+                    <span>Book Now</span>
                     <i>
                         <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
                         <img src="/assets/img/icons/arrow_white.svg" alt="Icon">

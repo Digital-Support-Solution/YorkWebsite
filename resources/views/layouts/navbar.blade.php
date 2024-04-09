@@ -9,6 +9,7 @@
                     </a>
                     <nav class="cs_nav">
                         <ul class="cs_nav_list ">
+                            <li><a href="{{ route('bookings') }}">Bookings</a></li>
                             <li><a href="{{ route('appointments') }}">Fees & Appointments</a></li>
                             <li><a href="{{ route('doctors') }}">Doctors</a></li>
                             <li><a href="{{ route('services') }}">Services</a></li>

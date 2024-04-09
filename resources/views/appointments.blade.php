@@ -16,7 +16,7 @@
             Learn more about our fees and payments.
         </p>
 
-          <a href="#appointment" class="cs_btn cs_style_1"  >
+          <a href="{{ route('bookings') }}" class="cs_btn cs_style_1"  >
               <span>Book Now</span>
               <i>
                   <img src="/assets/img/icons/arrow_white.svg" alt="Icon">
