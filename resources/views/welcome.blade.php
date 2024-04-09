@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="cs_hero_img">
-            <img src="assets/img/home_5/hero_img.png" alt="Hero">
+            <img src="assets/img/departments/banner_img_2.png" alt="Hero">
         </div>
 
         <div class="container">
